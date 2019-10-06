@@ -10,16 +10,18 @@ import UIKit
 
 class ShowSplashScreen: UIViewController {
 
+    @objc func showNavControl(){
+        performSegue(withIdentifier: "showSplashScreen", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        perform(Selector("showNavControl"), with: nil, afterDelay: 1.5)
+        perform(Selector(("showNavControl")), with: nil, afterDelay: 1.5)
     }
     
-    @objc func showNavControl(){
-        performSegue(withIdentifier: "showSplashScreen", sender: self)
-    }
+
     /*
     // MARK: - Navigation
 
